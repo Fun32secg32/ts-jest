@@ -123,7 +123,7 @@
     "eslint-plugin-jest": "^28.14.0",
     "eslint-plugin-jsdoc": "^50.8.0",
     "eslint-plugin-prettier": "^4.2.5",
-    "execa": "5.1.1",
+    "execa": "9.6.0",
     "fast-glob": "^3.3.3",
     "fs-extra": "^11.3.2",
     "globals": "^16.4.0",
