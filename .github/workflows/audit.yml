@@ -32,24 +32,24 @@ jobs:
 
     steps:
       - name: Checkout 🛎️
-        uses: actions/checkout@08eba0b27e820071cde6df949e0beb9ba4906955 # v4
+        uses: actions/checkout@34e114876b0b11c390a56381ad16ebd13914f8d5 # v4
         with:
           fetch-depth: 20
           fetch-tags: false
 
       - name: Initialize CodeQL ⚙️
-        uses: github/codeql-action/init@42213152a85ae7569bdb6bec7bcd74cd691bfe41 # v3
+        uses: github/codeql-action/init@f47c8e6a9bd05ef3ee422fc8d8663be7fe4bdc61 # v3
         with:
           languages: ${{ matrix.language }}
 
       - name: Perform CodeQL Analysis 🔍
-        uses: github/codeql-action/analyze@42213152a85ae7569bdb6bec7bcd74cd691bfe41 # v3
+        uses: github/codeql-action/analyze@f47c8e6a9bd05ef3ee422fc8d8663be7fe4bdc61 # v3
         with:
           category: '/language:${{ matrix.language }}'
 
   osv-scan:
     name: Scan Vulnerabilities with OSV 🛡️
-    uses: 'google/osv-scanner-action/.github/workflows/osv-scanner-reusable-pr.yml@e92b5d07338d4f0ba0981dffed17c48976ca4730' # v2.2.3
+    uses: 'google/osv-scanner-action/.github/workflows/osv-scanner-reusable-pr.yml@375a0e8ebdc98e99b02ac4338a724f5750f21213' # v2.3.1
     permissions:
       # Required to upload SARIF file to CodeQL. See: https://github.com/github/codeql-action/issues/2117
       actions: read
